@@ -1,0 +1,46 @@
+/* Card hover effects */
+.gadget-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.gadget-card:hover .card-img-wrapper img {
+  transform: scale(1.05);
+}
+
+/* Ribbon styling */
+.ribbon {
+  width: 85px;
+  height: 88px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+}
+
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 135px;
+  padding: 5px 0;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 0.7rem;
+  text-align: center;
+  right: -5px;
+  top: 20px;
+  transform: rotate(45deg);
+}
+
+.ribbon-top-right {
+  top: -5px;
+  right: -5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gadget-card {
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

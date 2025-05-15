@@ -1,0 +1,45 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1040;
+}
+
+.sidebar {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  padding: 1.5rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1050;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.d-none {
+  transform: translateX(-100%);
+}
+
+.sidebar.d-block {
+  transform: translateX(0);
+}
+
+.menu-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #333;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.menu-link:hover {
+  background-color: #f0f0f0;
+  color: #007bff;
+  border-radius: 5px;
+}
