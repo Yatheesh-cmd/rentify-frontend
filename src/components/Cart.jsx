@@ -95,7 +95,7 @@ function Cart() {
           contact: '9999999999',
         },
         theme: {
-          color: '#007bff',
+          color: '#ffc0cb',
         },
       };
 

@@ -188,7 +188,7 @@ function Home() {
                   <div className="text-warning me-2" style={{ fontSize: '0.8rem' }}>
                     <FaStar /> 4.8
                   </div>
-                  <small className="text-muted">(120 reviews)</small>
+                  <small className="text-muted">(100+ reviews)</small>
                 </div>
                 
                 <div className="d-flex justify-content-between align-items-center mt-auto">
