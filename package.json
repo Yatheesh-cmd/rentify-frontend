@@ -19,6 +19,7 @@
     "react-razorpay": "^3.0.1",
     "react-router-dom": "^7.6.0",
     "react-spring": "^10.0.0",
+    "react-to-pdf": "^2.0.0",
     "react-toastify": "^11.0.5"
   },
   "devDependencies": {

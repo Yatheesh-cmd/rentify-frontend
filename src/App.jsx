@@ -75,7 +75,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        <ToastContainer position="top-center" autoClose={100} />
+        <ToastContainer position="top-center" autoClose={200} />
       </BrowserRouter>
     </ContextApi>
   );

@@ -16,16 +16,16 @@ API.interceptors.request.use((config) => {
 });
 
 export const loginApi = async (data) => {
-  console.log('Sending login request for email:', data.email); // Safe debug
+  console.log('Sending login request for email:', data.email);
   const response = await API.post('/auth/login', data);
-  console.log('Login response received for email:', data.email); // Safe debug
+  console.log('Login response received for email:', data.email);
   return response;
 };
 
 export const registerApi = async (data) => {
-  console.log('Sending register request for email:', data.email); // Safe debug
+  console.log('Sending register request for email:', data.email);
   const response = await API.post('/auth/register', data);
-  console.log('Register response received for email:', data.email); // Safe debug
+  console.log('Register response received for email:', data.email);
   return response;
 };
 
@@ -75,8 +75,18 @@ export const userRentalsApi = async () => {
 };
 
 export const allRentalsApi = async () => {
-  const response = await API.get('/rental/all');
-  return response;
+  try {
+    const response = await API.get('/rental/all');
+    console.log('Rentals API response:', response.data);
+    // Additional log to inspect the userId field in the first rental
+    if (response.data && response.data.length > 0) {
+      console.log('First rental userId:', response.data[0].userId);
+    }
+    return response;
+  } catch (error) {
+    console.error('Error fetching rentals:', error.response?.data || error.message);
+    throw error;
+  }
 };
 
 export const createReviewApi = async (data) => {
