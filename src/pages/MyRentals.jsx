@@ -47,7 +47,7 @@ function MyRentals() {
             <FaBox /> My Rentals
           </h2>
           {rentals.length > 0 && (
-            <Button variant="primary" onClick={() => toPDF()}>
+            <Button variant="outline-danger" onClick={() => toPDF()}>
               <FaFilePdf className="me-2" />
               Download All as PDF
             </Button>
@@ -67,14 +67,14 @@ function MyRentals() {
                     <Col md={8}>
                       <div className="d-flex justify-content-between align-items-center mb-3">
                         <h5>Rental ID: {rental._id}</h5>
-                        <Button 
+                        {/* <Button 
                           variant="outline-primary" 
                           size="sm"
                           onClick={() => toPDF({ filename: `rental-${rental._id}.pdf` })}
                         >
                           <FaFilePdf className="me-1" />
                           Download
-                        </Button>
+                        </Button> */}
                       </div>
                       <p><strong>Status:</strong> {rental.status}</p>
                       <p><strong>Date:</strong> {new Date(rental.createdAt).toLocaleDateString()}</p>
